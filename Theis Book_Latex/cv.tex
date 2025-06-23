@@ -1,0 +1,225 @@
+%% start of file `template.tex'.
+% * <jawad.me442@gmail.com> 2017-10-30T18:50:32.204Z:
+%
+% ^.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\RequirePackage{filecontents}
+\begin{filecontents*}{\jobname.bib}
+
+@article{1,
+author = { \textbf{Asif  Bin  Karim} and Sakib  S Avro and  Saquib Shahriar},
+journal = {International Journal of Renewable Energy Resources},
+title = {{Prospect of Geothermal Energy Resources in Bangladesh}},
+year = {2019}
+}
+
+@article{2,
+author = {Avijit Mallik and Shaik Asif Hossain and \textbf{Asif Bin Karim} and Shahajada Mahmudul Hasan},
+journal = {International Journal of Sensors, Wireless Communications and Control},
+title = {{Development of LOCAL-IP based Environmental Condition Monitoring using Wireless Sensor Network}},
+year = {2019}
+}
+
+\end{filecontents*}
+
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{fontspec,lipsum}
+ \setmainfont{Times New Roman}
+ \usepackage{color}
+
+ \usepackage{lipsum}
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{burgundy}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+% makes a https hyperlink
+% usage: \httpslink[optional text]{link}
+\newcommand*{\httpslink}[2][]{% <=======================================
+  \ifthenelse{\equal{#1}{}}%
+    {\href{https://#2}{#2}}%
+    {\href{https://#2}{#1}}}
+
+\newcommand*{\googlescholarsocialsymbol}  {\includegraphics[width=0.5cm]{example-image-a}~} % <===================
+\newcommand*{\researchgatesocialsymbol}  {\includegraphics[width=0.5cm]{example-image-b}~} % <===================
+
+
+\makeatletter
+\RenewDocumentCommand{\social}{O{}O{}m}{%
+  \ifthenelse{\equal{#2}{}}%
+    {
+    \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httpslink[#3]{www.linkedin.com/in/#3}}}{}%
+    \ifthenelse{\equal{#1}{googlescholar}}{\collectionadd[googlescholar]{socials}{\protect\httpslink[#3]{www.googlescholar.com/profile/#3}}}{}% <================================================================
+    \ifthenelse{\equal{#1}{researchgate}}{\collectionadd[researchgate]{socials}{\protect\httpslink[#3]{www.researchgate.com/profile/#3}}}{}% <================================================================
+      \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httpslink[#3]{www.twitter.com/#3}}}    {}%
+      \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httpslink[#3]{www.github.com/#3}}}     {}%
+    }
+    {\collectionadd[#1]{socials}{\protect\httpslink[#3]{#2}}}}
+\makeatother
+
+
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+    }%
+}
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+
+
+
+% personal data
+\name{}{{\addfontfeature{LetterSpace=10.0}\fontsize{20}{20}\selectfont\scshape Asif Bin Karim}}
+\title{{\fontsize{10}{10}\selectfont \textcolor{black}{B.Sc in Mechatronics Engineering }}\\
+\textcolor{white}{.} \hfill {\fontsize{10}{10}\selectfont \textcolor{black}{Rajshahi University of Engineering \& Technology
+}}}
+
+
+% optional, remove / comment the line if not wanted
+\address{120 Kapasgola,Chawkbazer, Chittagong-4000, Bangladesh}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+880~1753524725}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{asif.mte.148004@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{satakshi.in/purnendu}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{purnenduk90}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{purnenduk90}                             % optional, remove / comment the line if not wanted
+\social[researchgate]{Asif\_Bin\_Karim}
+%\social[googlescholar]{Asif\_Bin\_Karim} % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[74pt][0.5pt]{DSC_1082-pp}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+\section{Career Objective}
+\cvitem{}{To grow and evolve in a reputed organization that demands integrity and dedication and has a long term and good career prospect, where I can utilize my present skills for maximum outcome and devote myself in any kind of challenge and come out with success.}
+\section{Education}
+\cventry{2015--2019}{Bachelor in Science}{Rajshahi University of Engineering \& Technology,RUET}{Rajshahi}{\textit{CGPA -- 3.49/4.00}}{1$^{st}$ class 8$^{th}$}
+\cventry{2012--2014}{Higher Secondary School Certificate}{Chittagong College}{Chittagong}{\textit{GPA -- 5.00/5.00}}{12th grade}
+\cventry{2006--2012}{Secondary School Certificate}{Chittagong Collegiate School}{Chittagong}{\textit{GPA -- 5.00/5.00}}{10th grade with 60$^{th}$ board Position \& Scholarship}
+\nocite{*} % <==========================================================
+\bibliographystyle{unsrt}
+\bibliography{\jobname}
+\newpage
+\section{Work Experience}
+\cventry{2017 April-2017 May}{\textbf{Intern Trainee}}{Pragoti Motors Ltd.}{}{}{}{}
+\cventry{2019 September - Present}{\textbf{Trainee Engineer}}{Alif Marine Engineering and Services Ltd.}{}{}{}
+\section{Thesis}
+\cvitem{Title}{\emph{\textbf{Environmental Condition monitoring and long distance actuator control using wireless sensor network(WSN).}} }
+\cvitem{Supervisor}{Md. Manirul Islam}
+\cvitem{Status}{Manuscript accepted in International Journal of Sensor,Wireless Communications and Control by world renowned Bentham Science Publisher for publication.}
+\section{Skills}
+\cvlistitem{Programming Languages: C, C++, Python,MATLAB}
+\cvlistitem{Scripting Language: HTML5,CSS}
+\cvlistitem{SQL Database:MySQL}
+\cvlistitem{Machine Function:PLC}
+\cvlistitem{Modeling Software: AUTOCAD,Proteus}
+\cvlistitem{Digital System Design: Arduino, ATMega32, RaspberryPi 2}
+\cvlistitem{Documentation \& Presentation Applications: LaTeX, Office Suite, Excel 2013}
+\cvlistitem{OS: Ubuntu, Windows}
+\section{Projects}
+\cventry{\emph{\textbf{Restaurant Service Robot}}}{Robotics Project}{Language: \textbf{Java,C} }{}{}{An service robot for automatic service and to provide the order automatically to the clients.}
+\vskip 0.1in
+\cventry{\emph{\textbf{Temperature controlled fan}}}{Microcontroller Project}{Language: \textbf{C \& C++}}{}{}{ A Fan which is able to increase or decrease it's speed according to the temperature.}
+\vskip 0.1in
+\cventry{\emph{\textbf{Room counter}}}{Sensor \& instrumentation Project}{Language: \textbf{C \& C++}}{}{}{ A project which can count the number of people entering or leaving a room.}
+\vskip 0.1in
+\cventry{\emph{\textbf{Walking Robot}}}{Mechatronics System Project}{Language: \textbf{Assembly}}{}{}{A robot which can overcome about 1 inch staircase and can run at a moderate speed .}
+\vskip 0.1in
+\cventry{\emph{\textbf{ Home Automation using IoT }}}{Embedded System Project}{Language: \textbf{Java,C}}{}{}{ A system was developed using NodeMCU capable of monitoring home security system.}
+\vskip 0.1in
+\cventry{\emph{\textbf{Gas leakage Detector}}}{Embedded System Project}{Language: \textbf{C \& HTML5}}{}{}{A system can detect the presence of highly concentrated gas leakage and to control the actuator.}
+\vskip 0.1in
+\cventry{\emph{\textbf{ Line Follower robot }}}{Inter-university robotics fest}{Language: \textbf{C}}{}{}{which follow a visual line embedded on the floor or ceiling.}
+\section{Technical Area of Interests}
+\cvlistitem{Internet of things(IoT)}
+\cvlistitem{Mechatronics System Design}
+\cvlistitem{Mechanical Modelling}
+\cvlistitem{Robotics}
+\cvlistitem{Engine Cooling System}
+\section{Languages}
+\cvitem{Bengali}{Native proficiency.}
+\cvitem{English}{Professional working proficiency.}
+\section{Achievements}
+\cvitem{}{\begin{enumerate}
+    \item Best poster presentation Award in International Conference on Computer, Communication, Chemical, Materials and Electronic Engineering held in University Of Rajshahi
+    \item Government Scholarship in Primary and Secondary School certificate exams.
+    \item Technical Scholarship From RUET
+\end{enumerate}}
+\section{References}
+\cvitem{}{1. Prof. Dr. Fakhrul Islam}
+\cvitem{}{Head,Department of Glass \& Ceramics Engineering}
+\cvitem{}{Bangladesh University of Engineering \& Technology(BUET)}
+\cvitem{}{Email: fislam@gce.buet.ac.bd}
+\cvitem{}{Cell: +8801819237183}
+\cvitem{}{2. Dr. Sajal Kumar Das}
+\cvitem{}{Head, Department of Mechatronics Engineering}
+\cvitem{}{Rajshahi University of Engineering \& Technology(RUET)}
+\cvitem{}{Email: head@mte.ruet.ac.bd}
+\cvitem{}{Cell: +8801719363933}
+\cvitem{}{3. Md Manirul Islam}
+\cvitem{}{Research Assistant,Department of Computing Science}
+\cvitem{}{University of Alberta, Edmonton, Alberta, Canada}
+\cvitem{}{Email: manirul@mte.ruet.ac.bd}
+\cvitem{}{Cell: +17806993643}
+
+\section{Declaration}
+\cvitem{}{I hereby declare that all above-mentioned information is in accordance with fact or truth up to my knowledge and I bear the responsibilities for the correctness of the above mentioned particulars.}
+\hfill \break
+\hfill \break
+
+\begin{document}
+\vskip 0.2in Asif bin Karim
+
+
+
+
+
+
+
+\end{document}
+
+\end{document}
+

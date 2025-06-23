@@ -1,0 +1,713 @@
+%\section*{Chapter 7}
+%\addcontentsline{toc}{section}{Chapter 7}
+%\subsection*{Test Results $\&$  Discussions}
+%\addcontentsline{toc}{subsection}{Test Results $\&$  Discussions}
+
+\vspace{\baselineskip}
+\subsubsection*{7.1 Sensor Signal Analysis $\&$  Processing}
+\addcontentsline{toc}{subsubsection}{7.1 Sensor Signal Analysis $\&$  Processing}
+\begin{justify}
+From experimental data, various calculations were performed using ‘MATLAB’ environment. The Digital Signal Analysis- Toolbar is a great tool for signal processing and smoothing. As the data were some arbitrary thus a processing is needed to overcome the problem. Mainly Fast Fourier Transformations were performed for better signal processing. The below figures are the results:
+\end{justify}\par
+
+\setlength{\parskip}{0.0pt}
+\begin{enumerate}
+	\item Coherence Estimation via Welch Method: This algorithm is based on standard MATLAB’s tools. The standard derivation of the mean is computed as [41-44];\par
+
+
+\begin{equation}\tag{1}
+ \sigma  \left( f \right) = \sqrt[]{\frac{2}{N \vert  \Upsilon  \left( f \right) ^{2} \vert } \left( 1- \vert  \Upsilon  \left( f \right)  \vert ^{2} \right) ^{2}}
+\end{equation}
+\begin{justify}
+Where,
+\end{justify}\par
+
+
+\begin{equation}\tag{2}
+ \vert  \Upsilon  \left( f \right)  \vert ^{2}= \frac{ \vert P_{xy} \left( f \right)  \vert ^{2}}{P_{xx} \left( f \right) .P_{yy} \left( f \right) }
+\end{equation}
+\begin{justify}
+Is the coherence function. By using equations-(1) $\&$  (2), Figure-7.1, can be plotted. Here, Figure-7.1 depicts the coherence estimation via Welch method. This figure shows that no data has been overlapped into one another.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 24 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=7.3in,height=2.59in]{./media/image23.png}
+		\caption{. 1 Coherence estimation via Welch method }
+		\label{fig:_1_Coherence_estimation_via_Welch_method_}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 24 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\setlength{\parskip}{8.04pt}
+\par
+
+\setlength{\parskip}{0.0pt}
+The Figure-7.2, denotes the magnitude response curve. The rms signal-to-noise ratio for an ideal N-bit converter is:\par
+
+
+\begin{equation}\tag{3}
+Signal to Noise Ratio (SNR) = 20log_{10}\frac{r.m.s value of F_{s} input}{r.m.s value of quantization noise}
+\end{equation}
+
+\begin{equation}\tag{4}
+or, SNR = 20log_{10}\frac{q^{2^{N}}/2\sqrt[]{2}}{q/\sqrt[]{2}}=20log_{10}2^{N}+20log_{10}\sqrt[]{\frac{3}{2}}
+\end{equation}
+\begin{justify}
+SNR = 6.02N + 1.76 dB (13), over the Nyquist bandwidth of interest.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 25 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=5.91in,height=2.16in]{./media/image25.png}
+		\caption{. 2 Magnitude Response Graph (Gas Sensor)}
+		\label{fig:_2_Magnitude_Response_Graph_Gas_Sensor}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 25 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\begin{justify}
+Figure-7.3, represents the combination of magnitude and phase response. The plot shows limited errors.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 26 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=5.52in,height=2.73in]{./media/image27.png}
+		\caption{. 3 Magnitude and Phase Response (Gas Sensor) }
+		\label{fig:_3_Magnitude_and_Phase_Response_Gas_Sensor_}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 26 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+	\item Time Domain signal processing: Now, using the gas sensor data Time-domain graph was plotted in Figure-7.4 to Figure-7.7, along with a 3rd and 8\textsuperscript{th} order Fast Fourier Transformation (FFT) of the signal for better analysis. The Fourier series is a sum of sine and cosine functions that describes a periodic signal. It is represented in either the trigonometric form or the exponential form. The toolbox provides this trigonometric Fourier series form [45]:\par
+
+
+\begin{equation}\tag{5}
+y=a_{0}+ \sum _{i=1}^{n}a_{i}cos \left( iwx \right) +b_{i}sin \left( iwx \right)
+\end{equation}
+\setlength{\parskip}{8.04pt}
+where a\textsubscript{0} models a constant (intercept) term in the data and is associated with the i = 0 cosine term, w is the fundamental frequency of the signal, n is the number of terms (harmonics) in the series, and 1 $ \leq $  n $ \leq $  8. A Savitzky–Golay filter is a digital filter that can be applied to a set of digital data points for the purpose of smoothing the data, that is, to increase the signal-to-noise ratio without greatly distorting the signal. This is achieved, in a process known as convolution, by fitting successive sub-sets of adjacent data points with a low-degree polynomial by the method of linear least squares. Figure-7.4 depicts the plots of Raw analog, Savitzky Golay Filtered value, moving avg. filtered value and the median plot.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 27 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=2.72in]{./media/image28.png}
+		\caption{. 4 Processed Signal (PPM vs Time)}
+		\label{fig:_4_Processed_Signal_PPM_vs_Time}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 27 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parskip}{0.0pt}
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{justify}
+Figure-7.5 shows the Furrier fitted curve for gas sensor value.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 28 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=2.38in]{./media/image29.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 28 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+The below Figure-7.6 $\&$  7.7 are the same plots as Figure-7.4 $\&$  7.5, but those value represents the Temperature and Humidity.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 29 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.36in,height=2.81in]{./media/image30.png}
+		\caption{. 6 Processed Signal (Humidity vs Time)}
+		\label{fig:_6_Processed_Signal_Humidity_vs_Time}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 29 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 30 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.25in,height=3.47in]{./media/image31.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 30 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\begin{justify}
+It shows that an 8\textsuperscript{th} order Fourier Transformation will result in a better signal conditioning.
+\end{justify}\par
+
+	\item Group delay response analysis: In signal processing, group delay is the time delay of the amplitude envelopes of the various sinusoidal components of a signal through a device under test, and is a function of frequency for each component. Phase delay, in contrast, is the time delay of the phase as opposed to the time delay of the amplitude envelope. Now from convolution theorem [46-50],\par
+
+
+\begin{equation}\tag{6}
+If, y \left( t \right) = \left( h\astx \right)  \left( t \right) ≝ \int _{-inf.}^{+inf.}x \left( u \right) h \left( t-u \right) du
+\end{equation}
+\begin{justify}
+In frequency domain; Y(s) = H(s).X(s). Then, on simplification and using some computational techniques it can be showed that;
+\end{justify}\par
+
+
+\begin{equation}\tag{7}
+x \left( t \right) =a \left( t \right) cos⁡ \left(  \omega t+ \theta  \right)
+\end{equation}
+\begin{justify}
+ $\&$  By assuming,  \(  \vert \frac{dlog \left( a \left( t \right)  \right) }{dt} \vert  \ll  \omega  \) , the output of such an LTI (Linear time-invariant) system can be approximated as,
+\end{justify}\par
+
+
+\begin{equation}\tag{8}
+y \left( t \right) = \vert H \left( i \omega  \right)  \vert a \left( t- \tau_{g} \right) cos⁡ \left(  \omega  \left( t- \tau_{ \phi } \right) + \theta  \right)
+\end{equation}
+\begin{justify}
+$\&$  they can be computed from the phase shift  \(  \phi  \)  $ \{ $ $\textbackslash$ displaystyle $\textbackslash$ displaystyle $\textbackslash$ phi $ \} $  by,  \(  \tau_{g} \left(  \omega  \right) =-\frac{d \phi  \left(  \omega  \right) }{d \omega } \)  and  \(  \tau_{ \phi } \left(  \omega  \right) =-\frac{ \phi  \left(  \omega  \right) }{ \omega } \) . From equation-(16), it can be shown that the group delay, $ \{ $ $\textbackslash$ displaystyle $\textbackslash$ displaystyle $\textbackslash$ tau \_$ \{ $ g$ \} $ $ \} $  \(  \tau_{g} \) , and phase delay, $ \{ $ $\textbackslash$ displaystyle $\textbackslash$ displaystyle $\textbackslash$ tau \_$ \{ $ $\textbackslash$ phi $ \} $ $ \} $  \(  \tau_{ \phi } \) , are frequency-dependent. To understand the convolution process of the LTI system, let the notation $ \{ $  \( x \left( u- \tau \right) ;u \) $ \} $  represent the function  \( x \left( u- \tau \right)  \)  with variable \(  u and \)  constant  \(  \tau. \)  Then a continuous-time system transforms an input function (x) into an output function (y) and in general, every value of the output can depend on every value of the input. This concept is represented by;
+\end{justify}\par
+
+
+\begin{equation}\tag{9}
+y \left( t \right) ≝O_{t} \left( x \right)
+\end{equation}
+\begin{justify}
+Where, \textit{O\textsubscript{t }}is the transformation operator for time (t). In a typical system, y(t) depends most heavily on the values of x that occurred near the time t. So, for a linear system;
+\end{justify}\par
+
+
+\begin{equation}\tag{10}
+O_{t} \left\{  \int _{-inf.}^{+inf.}c_{ \tau}.x_{ \tau} \left( u \right) d \tau; u \right} =  \int _{-inf.}^{+inf.}c_{ \tau}.y_{ \tau} \left( t \right) d \tau; u
+\end{equation}
+\begin{justify}
+$\&$  the time-invariance requirement is;
+\end{justify}\par
+
+
+\begin{equation}\tag{11}
+O_{t} \left\{ x \left( u- \tau \right) ;u \right} =y \left( t- \tau \right)  ≝O_{t- \tau} \{ x \}
+\end{equation}
+\begin{justify}
+From, eqn-10, the impulse response can be noted as;
+\end{justify}\par
+
+
+\begin{equation}\tag{12}
+h \left( t \right) ≝O_{t} \{  \delta u; u \}
+\end{equation}
+\begin{justify}
+From, equations-(10) to (12), using Amplitude vs samples; Figure-7.8 to Figure-7.10, can be drawn. Figure-7.8 is the group delay response plot for gas sensor which shows that between 11.3-12.2 kHz of sampling frequency the delay remains constant.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 31 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.44in,height=2.42in]{./media/image32.png}
+		\caption{. 8 Group delay response}
+		\label{fig:_8_Group_delay_response}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 31 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\begin{justify}
+Figure-7.9 represents the phase delay (with respect to samples), it shows also that 11.3-12.2 kHz sampling is the most effective one for the controller.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 32 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=2.67in]{./media/image34.png}
+		\caption{. 9 Phase Delay Samples}
+		\label{fig:_9_Phase_Delay_Samples}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 32 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+Figure-7.10, denotes the pole zero plot for the system, which shows that this system has some noise but ultimately it is stable. Figure-7.11 is the round-off noise power spectrum plot for the system. It shows some unnatural noise in the system.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 33 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.55in,height=2.29in]{./media/image35.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 33 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 34 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.46in,height=2.19in]{./media/image36.png}
+		\caption{. 11 Round-off noise Power Spectrum.}
+		\label{fig:_11_Roundoff_noise_Power_Spectrum}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 34 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\begin{justify}
+Figure-7.12 shows the actual $\&$  experimental Sensitivity vs Concentration plot, from where it can be said that the calibration was 90-95$\%$  accurate, which is good.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 35 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.42in,height=3.33in]{./media/image38.png}
+		\caption{. 12 Sensitivity vs PPM graph. (Log-Log plot)}
+		\label{fig:_12_Sensitivity_vs_PPM_graph_LogLog_plot}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 35 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 36 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=2.22in]{./media/image39.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 36 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\begin{justify}
+From, Figure-7.13, the step response can be shown where it is seen that initially the system runs fine but after a certain period it shows some abrasions but the used filter automatically fixes the errors. The below, Figure-7.14 shows the time domain and frequency domain analysis plot for the system.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 37 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.53in,height=2.27in]{./media/image41.png}
+		\caption{. 14 Time domain and Frequency domain graph for the system.}
+		\label{fig:_14_Time_domain_and_Frequency_domain_graph_for_the_system}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 37 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\begin{justify}
+The transfer function of the system can be estimated by using Welch Transfer function distribution theory, which is plotted on Figure-7.15. The Figure-7.16 shows the experimental relation between supplied voltage and gas concentration.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 38 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.51in,height=2.44in]{./media/image42.png}
+		\caption{. 15 Transfer function estimation via Welch distribution.}
+		\label{fig:_15_Transfer_function_estimation_via_Welch_distribution}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 38 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 39 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.37in,height=2.38in]{./media/image44.png}
+		\caption{. 16 Voltage vs PPM graph.}
+		\label{fig:_16_Voltage_vs_PPM_graph}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 39 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+	\item Power Spectrum Density Analysis (PSE or PSD): PSE is most important application area in Digital Signal Processing. There are mainly two types of power spectrum estimation (PSE) method: Parametric and nonparametric. Parametric or non-classical methods an analyzed process is place by an appropriate model with known spectrum. Non-parametric do not make any assumption on the data generating process. It is start by estimating autocorrelation sequence from a given data. The power spectrum then is estimated via FT of an estimated autocorrelation sequence. Window function is a mathematical function that is zero valued outside of some chosen period. When another unction or waveform or data sequence is multiplied by a window function, the product is also zero-valued outside the period; all that is left is the part where they overlap the observation through the window. It is simple to apply and understand. In this method the frequency of a filter, HD(w) and the corresponding impulse response, hD(n), are related by the inverse Fourier transform [44, 50-53]:
+\end{enumerate}\par
+
+
+\begin{equation}\tag{13}
+h_{D} \left( n \right) = \frac{1}{2 \pi } \int _{- \pi }^{ \pi }H_{D} \left( w \right) e^{iwn}dw
+\end{equation}
+\begin{justify}
+Where HD(w) is frequency response of a filter and hD(n) is corresponding impulse response. The subscript D is used to make a difference between the ideal and practical responses. Here, HD(w) can be obtained from hD(n) by evaluating the inverse Fourier transform. The truncation of hD(n) to a length M-1 is equivalent to multiplying hD(n)by a rectangular window [2] defined as:
+\end{justify}\par
+
+
+\begin{equation}\tag{14}
+w \left( n \right) = \left\{ \begin{array}{ll}
+	1,~ \&n=0,1,2, \ldots .. \left( M-1 \right) \\
+	0,~ \&otherwise\\
+	\end{array}
+\end{equation}
+\begin{justify}
+And unit impulse response will be:
+\end{justify}\par
+
+
+\begin{equation}\tag{15}
+h \left( n \right) =h_{D} \left( n \right) .w \left( n \right)
+\end{equation}
+
+\begin{equation}\tag{16}
+h \left( n \right) = \left\{ \begin{array}{ll}
+	h_{D} \left( n \right) ,~ \&n=0,1,2, \ldots .. \left( M-1 \right) \\
+	0,~ \&otherwise\\
+	\end{array}
+\end{equation}
+\begin{justify}
+Frequency domain function in representation of window function is,
+\end{justify}\par
+
+
+\begin{equation}\tag{17}
+W \left( w \right) = \sum _{n=0}^{M-1}w \left( n \right) .e^{-jwn}
+\end{equation}
+\begin{justify}
+The individuality of it play a significant role in establishment of the resulting frequency response of the finite impulse response filter obtained by truncation hD(n) to length M. The undesirable effects are best alleviated by the use of window that do not contain abrupt discontinuities in their time domain characteristics and have likewise low side lobes in their frequency domain characteristics. For the same value of M for both Rectangular and Hamming window or other windows, the width of the main lobe is also wider for these windows compared to the rectangular window. The Fourier transform of rectangular window [44-50, 54]:
+\end{justify}\par
+
+
+\begin{equation}\tag{18}
+W \left( w \right) = \sum _{n=0}^{M-1}e^{-jwn}
+\end{equation}
+\begin{justify}
+On simplification equation-(26) reaches,
+\end{justify}\par
+
+
+\begin{equation}\tag{19}
+W \left( w \right) = \sum _{n=0}^{M-1}e^{-jwn}=e^{-jw.\frac{ \left( M-1 \right) }{2}}.\frac{sin \left( wM/2 \right) }{sin \left( w/2 \right) }
+\end{equation}
+\begin{justify}
+The Hamming window function in time domain decrease more gently towards zero on either side and in frequency domain, the amplitude of the main lobes is wider approximately double than that of rectangular window, but side lobes are lesser relative to the main lobe about 40 dB down the main lobes, compared with 14 dB for the rectangular window. Hamming window lead to a filter with wider transition width but higher stopband attenuation.
+\end{justify}\par
+
+
+\begin{equation}\tag{20}
+Y \left( n \right) =x \left( n \right) .w \left( n \right)
+\end{equation}
+\begin{justify}
+Where Y(n) is output signal x(n) is input signal, and w(n) [1] is window function.
+\end{justify}\par
+
+
+\begin{equation}\tag{29}
+w \left( n \right) =0.54+0.46cos \left( \frac{2 \pi }{N} \right) ,~ where \left\{ \begin{array}{ll}
+	-\frac{N}{2} \leq n \leq \frac{N}{2}  \left( N=Even number \right) \\
+	- \left( N-2 \right)  \leq n \leq \frac{ \left( N-1 \right) }{2} \left( N=odd number \right) \\
+	\end{array}
+\end{equation}
+\begin{justify}
+Transition width,  \(  \Delta f=\frac{3.3}{N} \) . Where N is filter length, and $ \Delta $ \textit{f} is normalized transition width Window Length, L = N+1. In Power Spectrum Estimation is most important application area in Digital Signal Welch method have two basic modification to the normal analytic method. These are allowed the data length to overlap. The data segment can be represented as,
+\end{justify}\par
+
+
+\begin{equation}\tag{21}
+x \left( n \right) =x \left( n+iD \right)  \left\{ \begin{array}{ll}
+	n=0,1,2, \ldots  \ldots . \left( M-1 \right) \\
+	i=0,1,2, \ldots  \ldots  \ldots . \left( L-1 \right) \\
+	\end{array}
+\end{equation}
+\begin{justify}
+Where iD is the starting point for the ith sequence. If D = M, the segment does not overlap and the L of data sequence is identical to the data segment of Bartlett method. The second change in Welch method is to window the data segments prior to computing the periodogram.
+\end{justify}\par
+
+
+\begin{equation}\tag{22}
+P_{xx}^{i} \left( f \right) =\frac{1}{MU} \vert  \sum _{n=0}^{M-1}x \left( n \right) .w \left( n \right) .e^{-j.2 \pi fn} \vert , where i=1,2, \ldots  \ldots  \ldots .. \left( L-1 \right)
+\end{equation}
+\begin{justify}
+Where U is a normalization factor for the power.
+\end{justify}\par
+
+
+\begin{equation}\tag{23}
+U=\frac{1}{M} \sum _{n=0}^{M-1}w^{2} \left( n \right)
+\end{equation}
+\begin{justify}
+The Welch power spectrum estimate is the average of modified periodogram, is
+\end{justify}\par
+
+
+\begin{equation}\tag{24}
+P_{xx}^{w}=\frac{1}{L} \sum _{i=0}^{L-1}P_{xx}^{i} \left( f \right)
+\end{equation}
+\begin{justify}
+Mean value of Welch estimate [55],
+\end{justify}\par
+
+
+\begin{equation}\tag{25}
+E \left[ P_{xx}^{w} \left( f \right)  \right] =\frac{1}{L} \sum _{i=0}^{L-1}E.P_{xx}^{i} \left( f \right)
+\end{equation}
+\begin{justify}
+The resolution of estimated power estimation is determined by the spectral resolution of each segment which is of length L, it is window dependent. From equations-(21) to (34), Figure-7.17 $\&$  Figure-7.18 can be drawn.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 40 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.61in,height=2.4in]{./media/image45.png}
+		\caption{. 17 Welch power spectrum estimate for Gas sensor.}
+		\label{fig:_17_Welch_power_spectrum_estimate_for_Gas_sensor}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 40 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 41 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.52in,height=2.59in]{./media/image46.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 41 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\setlength{\parskip}{8.04pt}
+\subsubsection*{7.2 Feedback Control for the Controller }
+\addcontentsline{toc}{subsubsection}{7.2 Feedback Control for the Controller }
+\begin{justify}
+In this system, the reference value is set at 2000 ppm of smoke concentrations. Whenever the controller gets a reading higher than 2000 ppm from the gas sensor then it automatically activates the actuators and the rise in concentration gets mitigated. Thus, the error in the system is eliminated very soon after it takes place in the plant. Fig. shows the schematic of the used feedback method of control for the proposed system.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 42 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=3.88in]{./media/image48.JPG}
+		\caption{. 19 Schematic for feedback control system}
+		\label{fig:_19_Schematic_for_feedback_control_system}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 42 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+\subsubsection*{7.3 Feedforward Control for the Controller }
+\addcontentsline{toc}{subsubsection}{7.3 Feedforward Control for the Controller }
+\begin{justify}
+For the feedforward control, when any abruptions take place in any sensors, then it is very necessary to mitigate the error before it takes place in the plant. Thus, manual wireless switching is introduced here to control the abruptions. From the computer, the actuation signal buttons are pressed from the webpage which in regards sends a signal to the controller via\textit{ }a routing media (for this experiment a 300 mbps router is used). When the signal is received by the controller, a swift actuator switching takes place to mitigate the abruptions. Fig. shows the graphical representation of the proposed feedforward control system for the experimental setup.
+\end{justify}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 43 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=5.15in,height=3.62in]{./media/image49.JPG}
+		\caption{. 20 Schematic for feedforward control system}
+		\label{fig:_20_Schematic_for_feedforward_control_system}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 43 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+\par
+
+
+\vspace{\baselineskip}
+\subsubsection*{7.4 Data Security }
+\addcontentsline{toc}{subsubsection}{7.4 Data Security }
+\paragraph*{7.4.1 Cryptographic nonce}
+\addcontentsline{toc}{paragraph}{7.4.1 Cryptographic nonce}
+\begin{justify}
+A nonce is a random or semi-random number that is generated for a specific use, typically related to \href{https://searchsecurity.techtarget.com/definition/cryptography}{cryptographic} communication or information technology. The term itself stands for $``$number used once$"$  or $``$number once$"$  and is most commonly referred to specifically as a cryptographic nonce.\ Data\ was\ sent by adding an arbitrary value and when data was received by a controller it subtracted the arbitrary value by itself. The value was randomly selected by the user. If any attack will occur during data communication the attacker will get the data with the added arbitrary value.
+\end{justify}\par
+
+\subsubsection*{7.5 Conclusions}
+\addcontentsline{toc}{subsubsection}{7.5 Conclusions}
+\begin{justify}
+The fabricated system run successfully and 20 trials were performed to measure its performance. It showed no errors in those 20 trials which took almost 3 hours to execute. The control system took almost 1 seconds (approximately) to perform necessary commands when signals came from the host server. From analyzed signals the impulse period and the group delay period seemed quite perfect if the Baud Rate (Sampling Frequency) tuning ranges from 11 to 12.6 kHz. In this dissertation, 11.52 kHz Sampling Frequency was used and the power density spectrum of gas sensor was quite fine though the Signal to Noise ratio was a little high. This can be overcome by using a 20 pF ceramic disk capacitor as it can work as a low pass filter. The overall system efficiency was about 95$\%$ , which is quite good for a robust controlling operation.
+\end{justify}\par
+
+
+\vspace{\baselineskip}
+\subsubsection*{7.6 Future Work}
+\addcontentsline{toc}{subsubsection}{7.6 Future Work}
+\begin{justify}
+This framework can be extended for the development of building and city automation and Industry 4.0. Also, the WSN based control scheme can be extended for controlling and monitoring of remote devices such as robots, different types of rovers etc. Though there are numerous future scopes of the project, some of this are listed below
+\end{justify}\par
+
+\begin{justify}
+(1) The web page further can be developed to provide real time chart for better visualization of sensor node data in an android APK app for the Android users.
+\end{justify}\par
+
+\begin{justify}
+(2) Voice commands technology can be implemented for controlling Actuators.\\
+(3) Adaptive fuzzy logic can be implemented for automatic controlling of AC, water pump\\
+and other equipment’s. It can also be used to pre-detect the probability of the fire.
+\end{justify}\par

@@ -1,0 +1,211 @@
+\documentclass[12pt, oneside, a4paper]{extreport}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{threeparttable}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{supertabular}
+\usepackage{amssymb}
+\usepackage{afterpage}
+\usepackage{fancyhdr}
+\usepackage[bf]{caption_pmo}
+\usepackage{pifont}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{hhline}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{cite}
+\usepackage{float}
+\usepackage{here}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+%\usepackage[dvips]{color}
+\usepackage{graphics}
+\usepackage{theorem}
+\usepackage{boxdims}
+\usepackage{pstricks}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{siunitx}
+\usepackage{xcolor,colortbl}
+\usepackage{boldline,multirow}
+%\usepackage[font=normalsize,labelfont=bf]{caption}
+\usepackage[font=normalsize,labelfont=bf]{caption}
+\usepackage{times}
+\usepackage[nottoc]{tocbibind}
+\usepackage{makecell}
+
+
+\setlength{\parskip}{0.5cm}
+
+
+
+\usepackage[up,bf,raggedright]{titlesec}
+%\usepackage{blindtext}
+
+\titleformat{\chapter}[display]
+ {\normalfont\Large\bfseries\huge}{\filright\chaptertitlename\ \thechapter} {20pt}{\Large\huge\filright}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+%\titleformat{\chapter}{\filright\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge}
+
+
+
+%\usepackage{kantlipsum}
+%\fancyhf{} % clear all header and footers
+%\renewcommand{\headrulewidth}{0pt} % remove the header rule
+%\fancyfoot[CE,CO]{\thepage} % Left side on Even pages; Right side on Odd pages
+%\pagestyle{fancy}
+%\fancypagestyle{plain}{%
+%  \fancyhf{}%
+ % \renewcommand{\headrulewidth}{0pt}%
+ % \fancyhf[lef,rof]{\thepage}%
+%}
+
+
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\cfoot{\thepage}
+ %\renewcommand{\headrulewidth}{0pt}%
+ % \renewcommand{\footrulewidth}{0pt}%
+
+
+
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=4cm]{geometry}
+
+\newcommand{\cy}[1]{\citeyear*{#1}}  % year NO brackets
+\newcommand{\sun}{\hbox{$\odot$}}
+\newcommand{\degr}{^{\circ}}  % degree symbol
+\newcommand{\fdg}{\hbox{$.\!\!^\circ$}}  % . and degree
+\newcommand{\textbfit}[1]{\textbf{\textit{#1}}}
+\newcommand{\mathbfit}[1]{\textbf{\textit{#1}}}
+\newcommand{\textbfss}[1]{\textbf{\textsf{#1}}}
+\newcommand{\mathbfss}[1]{\textbf{\textsf{#1}}}
+\newcommand{\bmath}[1]{\mathbfit{#1}}   % meant to be bold math symbol
+\renewcommand{\captionsize}{\small}
+
+\newlength{\eqntop}    % space to add between text and top of equation
+\newlength{\eqnbot}    % space to add between bottom of eqn and text
+\setlength{\eqntop}{1mm}  % move equations up
+\setlength{\eqnbot}{0mm}     % no change
+
+\setlength{\abovedisplayskip}{0mm}
+\setlength{\belowdisplayskip}{10mm}
+\setlength{\abovedisplayshortskip}{0mm}
+\setlength{\belowdisplayshortskip}{10mm} \setlength\arraycolsep{2pt}
+
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\def\tr{\mathop{\rm tr}\nolimits} % Trace of matrix
+\def\diag{\mathop{\rm diag}\nolimits} % Diagonal matrix
+\newenvironment{ewosp}{\begin{enumerate} \setlength{\itemsep}{0mm} \setlength{\parskip}{0mm}}
+{\end{enumerate}}
+\newcommand{\dispfrac}[2]{\displaystyle{\frac{#1}{#2}}}
+\newcommand{\dfn}{\buildrel {\triangle}\over =}
+%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT AND PREFACE %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagenumbering{roman}
+\setcounter{page}{0}
+%\clearpage
+
+\begin{center}
+{\small{\bf Heaven's Light is Our Guide}}\\
+{\small{\bf RAJSHAHI UNIVERSITY OF ENGINEERING \& TECHNOLOGY}}
+\vspace{0.4in}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5cm]{ruet}
+\end{figure}
+\vspace{-0.1in}
+{\large{ A THESIS REPORT\\ ON}}\\
+\vspace{0.2in}
+ {\LARGE{Environment Condition Monitoring and Long Distance Actuator Control using Wireless Sensor Network (WSN)\\}}
+
+\vspace{0.5in}
+\end{center}
+A thesis report is submitted to the Department of Mechatronics Engineering, Rajshahi
+University of Engineering \& Technology in partial fulfillment of the requirement for the degree
+of {\bf Bachelor of Science in Mechatronics Engineering.} \\
+
+\hspace{-.35in}
+\begin{tabular}{p{0.50\textwidth}cp{0.68\textwidth}}
+{\bf Supervised by-} && ~~~~~~~~~~~~~~{\bf Submitted by-}\\
+{\bf Md. Manirul Islam} && ~~~~~~~~~~~~~~{\bf Md. Asif Bin Karim }\\
+Assistant Professor && ~~~~~~~~~~~~~~Roll No.: 148004\\
+Department of Mechatronics Engineering && ~~~~~~~~~~~~~~{\bf Saquib Shahriar } \\
+Rajshahi University of Engineering \& Technology. && ~~~~~~~~~~~~~~Roll No.: 148007
+\end{tabular}
+\clearpage
+
+\include{declaration}
+\include{ack}
+\include{abs}
+
+
+\clearpage
+
+\renewcommand\contentsname{List of Contents}
+\tableofcontents
+
+{
+\let\oldnumberline\numberline
+\renewcommand{\numberline}{\figurename~\oldnumberline}
+\renewcommand\listfigurename{\textbf{List of Figures}}
+\listoffigures
+}
+{
+\let\oldnumberline\numberline
+\renewcommand{\numberline}{\tablename~\oldnumberline}
+\renewcommand\listtablename{\textbf{List of Tables}}
+\listoftables
+}
+
+
+
+
+%\setcounter{page}{0}
+%\clearpage % abbreviations
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Size of Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\breit}{7cm}
+\newcommand{\hoch}{5.5cm}
+\newcommand{\winkel}{0}
+
+\clearpage
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+ \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+
+\pagenumbering{arabic}
+\include{introduction}
+\include{literature}
+\include{technical}
+\include{methodology}
+\include{modeling}
+\include{setup}
+\include{testing}
+\include{conclusion}
+%\include{appendix}
+
+
+
+\bibliographystyle{IEEEtran}
+\renewcommand{\bibname}{\textbf{References}}
+\bibliography{acc}
+\bibliographystyle{unsrt}%{adfathesis}%{IEEEtran}
+\end{document} 

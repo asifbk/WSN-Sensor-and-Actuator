@@ -1,0 +1,51 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces NodeMCU\relax }}{13}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces NodeMCU v.1.0 Pin Definition\relax }}{15}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MQ-6 Gas sensor\relax }}{16}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces MQ-6 circuit.\relax }}{17}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces MQ-6 pinout.\relax }}{17}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces MQ-6 gas sensor sensitivity at optimum conditions [38].\relax }}{18}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces MQ-6 sensor sensitivity with respect to Temperature [38].\relax }}{19}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces DHT11 Temperature and Humidity sensor Breakout\relax }}{20}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 12V DC solenoid valve [39].\relax }}{21}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces DC Pump\relax }}{22}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Arduino-IDE lookout\relax }}{23}% 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Php My Admin console\relax }}{24}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces System Block Diagram\relax }}{26}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Flowchart of the monitoring system\relax }}{28}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces MQ-6 Equivalent Circuit.\relax }}{29}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Schematic Diagram of the System\relax }}{36}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Schematic diagram of a solar panel\relax }}{37}% 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Database Server (PHP my admin).\relax }}{38}% 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Highest and lowest data samples. \relax }}{39}% 
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Web interface\relax }}{40}% 
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Data stored in database.\relax }}{41}% 
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Controlling Actuator from server \relax }}{42}% 
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Implemented system \relax }}{42}% 
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Relay state ON/OFF using Feedforward \& Feedback control system (For Actuator Controlling\relax }}{43}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Coherence estimation via Welch method \relax }}{45}% 
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Magnitude Response Graph (Gas Sensor)\relax }}{45}% 
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Magnitude and Phase Response (Gas Sensor) \relax }}{46}% 
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Processed Signal (PPM vs Time)\relax }}{47}% 
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Furrier fitted curve for gas sensor value\relax }}{47}% 
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Processed Signal (Humidity vs Time)\relax }}{48}% 
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Humidity vs Time domain graph with $8^{th}$ order furrier transform using 95\% of confidence limit\relax }}{48}% 
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Group delay response\relax }}{50}% 
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Phase Delay Samples\relax }}{50}% 
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Pole Zero Plot.\relax }}{51}% 
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Round-off noise Power Spectrum.\relax }}{51}% 
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Sensitivity vs PPM graph. (Log-Log plot)\relax }}{52}% 
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Step response.\relax }}{52}% 
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Time domain and Frequency domain graph for the system.\relax }}{53}% 
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Transfer function estimation via Welch distribution.\relax }}{53}% 
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Welch power spectrum estimate for Gas sensor.\relax }}{56}% 
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Welch Cross power density estimate.\relax }}{56}% 
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Schematic for feedback control system\relax }}{57}% 
+\contentsline {figure}{\numberline {7.19}{\ignorespaces Schematic for feedforward control system\relax }}{57}% 
+\addvspace {10\p@ }

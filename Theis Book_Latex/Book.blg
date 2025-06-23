@@ -1,0 +1,41 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Book.aux
+A level-1 auxiliary file: declaration.aux
+A level-1 auxiliary file: ack.aux
+A level-1 auxiliary file: abs.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: literature.aux
+A level-1 auxiliary file: technical.aux
+A level-1 auxiliary file: methodology.aux
+A level-1 auxiliary file: modeling.aux
+A level-1 auxiliary file: setup.aux
+A level-1 auxiliary file: testing.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: IEEEtran.bst
+Illegal, another \bibstyle command---line 64 of file Book.aux
+ : \bibstyle
+ :          {unsrt}
+I'm skipping whatever remains of this command
+Database file #1: acc.bib
+Repeated entry---line 44 of file acc.bib
+ : @article{amin2018design
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 61 of file acc.bib
+ : @inproceedings{keshamoni2017smart
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 101 of file acc.bib
+ : @article{mahalingam2012design
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 108 of file acc.bib
+ : @inproceedings{alekseev2017information
+ :                                       ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+(There were 5 error messages)
